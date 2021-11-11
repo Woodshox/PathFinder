@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="w" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="02p-Ae-oft" customClass="NodeView" customModule="w" customModuleProvider="target">
+                                <rect key="frame" x="20" y="68" width="374" height="300"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="jgV-be-ADw"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN2-qi-4EA">
+                                <rect key="frame" x="20" y="418" width="100" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="4Hq-4d-Llt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Clear"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MPR-iU-XBM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlL-FK-LwU">
+                                <rect key="frame" x="294" y="418" width="100" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="G01-gb-r4y"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Pathfind"/>
+                                <connections>
+                                    <action selector="pathfind:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vi0-qT-7Bz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="02p-Ae-oft" secondAttribute="trailing" constant="20" id="6QM-L2-vF1"/>
+                            <constraint firstItem="02p-Ae-oft" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8HA-iV-mL9"/>
+                            <constraint firstItem="DlL-FK-LwU" firstAttribute="top" secondItem="02p-Ae-oft" secondAttribute="bottom" constant="50" id="AYV-8X-4ar"/>
+                            <constraint firstItem="02p-Ae-oft" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="FfU-lY-TkT"/>
+                            <constraint firstItem="EN2-qi-4EA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JAh-x3-TJv"/>
+                            <constraint firstItem="EN2-qi-4EA" firstAttribute="top" secondItem="02p-Ae-oft" secondAttribute="bottom" constant="50" id="bYo-O6-B4t"/>
+                            <constraint firstItem="DlL-FK-LwU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EN2-qi-4EA" secondAttribute="trailing" constant="8" symbolic="YES" id="myX-Sn-r2x"/>
+                            <constraint firstItem="EN2-qi-4EA" firstAttribute="leading" secondItem="02p-Ae-oft" secondAttribute="leading" id="sR4-Be-vLx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DlL-FK-LwU" secondAttribute="trailing" constant="20" id="yM7-PV-CrC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nodeView" destination="02p-Ae-oft" id="7cJ-2v-wgk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
